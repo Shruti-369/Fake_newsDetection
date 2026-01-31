@@ -148,16 +148,17 @@ cursor = None
 
 try:
     conn = psycopg2.connect(
-        dbname="fake_news_db",
-        user="postgres",
-        password="jangra.11",   # 🔴 apna password
-        host="localhost",
-        port="5432"
+        dbname=os.environ.get("DB_NAME"),
+        user=os.environ.get("DB_USER"),
+        password=os.environ.get("DB_PASS"),
+        host=os.environ.get("DB_HOST"),
+        port=os.environ.get("DB_PORT"),
+        sslmode="require"
     )
     cursor = conn.cursor()
     print("Database connection successful.")
 except Exception as e:
-    print(f"Warning: Database connection failed. Reporting feature will be disabled. Error: {e}")
+    print(f"Database connection failed: {e}")}")
 
 # Initialize History Table
 if cursor:
