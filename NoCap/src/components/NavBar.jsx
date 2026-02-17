@@ -35,14 +35,9 @@ function NavBar() {
 
             {/* Logo */}
             <div className="flex items-center space-x-3 group cursor-pointer">
-              <div className="relative w-10 h-10">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-100 rounded-xl blur-md opacity-75"></div>
-                <div className="relative bg-gradient-to-br from-red-500 to-red-300 p-1.5 rounded-xl">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-              </div>
+              
               <div>
-                <h1 className="text-xl font-semibold text-red-600">
+                <h1 className="text-2xl font-bold text-red-600">
                   NoCap
                 </h1>
                 <p className="text-xs text-gray-600 -mt-1">Fake News Detector</p>
